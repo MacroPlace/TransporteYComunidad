@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #1037e796 0%, #b752faab 100%);
+    --color-primary:#869bfc;
+    --color-secondary:#2f9600;
+    --boton-padding: 20px 40px;
+}
+.imagen.macro{
+    width: 50px; height: 50px;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+}
+.subtitle{
+    color: rgb(51, 0, 66);
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+.hero{
+    height: 100vh;
+    background-image: var(--background), url('../assets/GPS.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+.hero.container{
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+.nav--footer{
+    font-weight: 300;
+    justify-content: flex-start;
+}
+.nav__items--cta{
+    border: 1px solid rgba(223, 0, 0, 0) ;
+}
+.nav__items--footer{
+    padding: 10px; 
+}
+.hero__container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: rgb(255, 230, 0);
+}
+.hero__texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+.hero__title{
+font-size: 3.2rem;
+text-align:center
+}
+.hero__subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+.hero_wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+/*1*/
+.about__pictures{
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    float: right;
+}
+.presentation{
+    padding: 0;
+    text-align: center;
+}
+
+.Presentation__picture{
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.presentation__copy{
+    color: rgb(14, 24, 82);
+    width: 80%;
+    margin: 0 auto;
+}
+.about{
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+    justify-items: center;
+    align-items: center;
+}
+.about__img{
+    text-align: center;
+}
+.about__img--left{
+text-align: left;
+}
+.about__picture{
+    max-width: 80%;
+}
+.about__paragraph{
+    color: rgb(50, 54, 252);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.projects{
+    background-image: var(--background), url('../assets/fondo\ de\ transport.jpg');
+}
+.projects__grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas: 
+    "imagen1 imagen1 imagen2 imagen3"
+    "imagen1 imagen1 imagen4 imagen5";
+    gap: 10px;
+}
+.projects__item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+}
+.projects__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.projects__item:nth-last-of-type(1){
+    grid-area: imagen1;
+}
+.projects__item:nth-last-of-type(2){
+    grid-area: imagen2;
+}
+.projects__item:nth-last-of-type(3){
+    grid-area: imagen3;
+}
+.projects__item:nth-last-of-type(4){
+    grid-area: imagen4;
+}
+.projects__item:nth-last-of-type(5){
+    grid-area: imagen5;
+}
+.projects__hover{
+    position: absolute;
+    background: rgba(255, 217, 0, 0.527);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+.projects__item:hover .projects__hover{
+    transform: translateX(0%);
+}
+
+.project__icon{
+    margin-top: 10px;
+    font-size: 30px;
+}
+.testimony__grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.testimony__item{
+    width: 95%;
+    margin: 0 auto;
+    background: var(--color-primary);
+    box-shadow: 0 8px 10px rgb(66, 66, 66 .5);
+    border-radius: 7px;
+    padding: 30px 25px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+.testimony__person{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.testimony__img{
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 3px solid rgb(110, 44, 44);
+    margin-right: 30px;
+}
+.testimony__name{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.testimony__verification{
+    color: rgb(0, 38, 255);
+    font-weight: 700;
+}
+.testimony__review{
+    font-weight: 300;    
+}
+.footer{
+    background-image: var(--background), url('../assets/fondo\ de\ transport.jpg');
+}
+.footer__grid{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+.footer__title{
+    font-weight: 400;
+    color: rgb(126, 0, 0);
+    font-size:  2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer__container-icons{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: aqua;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+.footer__icons{
+
+    color: inherit;
+    font-size: 50px;
+    text-decoration: none;
+}
+.fab.footer__icon{
+    line-height: 60px;
+}
